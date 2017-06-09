@@ -1,0 +1,27 @@
+<html>
+<head>
+<title>Dogpoll</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1>Cats or dogs?</h1>
+<p>You replied: {{ Reply }}</p>
+<p><b>The following {{ Losers |length }} losers chose cats:</b></p>
+{% for loser in Losers %}
+<p>{{ loser }}</p>
+{% endfor %}
+<p><b> Meanwhile, the following {{ Winners |length }} normal people chose dogs:</b></p>
+{% for winner in Winners %}
+<p>{{ winner }}</p>
+{% endfor %}
+    </br>
+  <a href="/">Go home-o, Romeo</a></br>
+</body>
+</html>
